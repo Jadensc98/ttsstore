@@ -14,14 +14,12 @@ class ProductsController < ApplicationController
   def show
   end
   
-  def mens
-      @mens = Product.find(params[id: 1])
-  end 
+
 
   # GET /products/new
   def new
     @product = Product.new
-    authorize :create, @product
+    authorize! :create, @product
     @categories = Category.all
     
   end
@@ -65,7 +63,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
-    authorize :destroy, @product
+    authorize! :destroy, @product
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }

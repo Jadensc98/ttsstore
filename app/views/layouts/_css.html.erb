@@ -4,15 +4,37 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <style>
+      /* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+      
   body {
       font: 400 15px/1.8 Lato, sans-serif;
       color: #777;
       background-color: #273544;
       text-align: center;
+      margin-top: 50px;
   }
       #mycart {
           margin-top: 100px;
       }
+
   h3, h4 {
       margin: 10px 0 30px 0;
       letter-spacing: 10px;      
@@ -20,6 +42,7 @@
       color: #111;
   }
     
+
   .container {
       padding: 0%;
   }
@@ -34,10 +57,17 @@
       border-color: #f1f1f1;
   }
       .carousel-control{
-         margin-left: -100px;
-         margin-right: -100px;
+
       }
-      
+      #details {
+          margin-top: 200px;
+      }
+      .bg-2 {
+          background: #2d2d30;
+      color: #bdbdbd;
+          margin-left: -370px;
+          margin-right: -370px;
+      }
   .carousel-inner img {
       -webkit-filter: grayscale(90%);
       filter: grayscale(90%);  
@@ -58,9 +88,12 @@
       display: none; 
     }
   }
+
   .bg-1 {
       background: #2d2d30;
       color: #bdbdbd;
+      margin-left: -370px;
+      margin-right: -370px;
   }
   .bg-1 h3 {color: #fff;}
   .bg-1 p {font-style: italic;}
@@ -143,4 +176,15 @@
   textarea {
       resize: none;
   }
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
   </style>

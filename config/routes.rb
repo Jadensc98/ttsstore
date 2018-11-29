@@ -22,10 +22,8 @@ Rails.application.routes.draw do
   root 'storefront#home'
 
   get 'all_items' => 'storefront#all_items'
-  
-  get 'mens_furniture' => 'sotrefront#mens_furniture'
 
-  get 'womens_furniture' => 'storefront#womens_furniture'
+  get 'furniture' => 'storefront#furniture'
 
   get 'mens_section' => 'storefront#mens_items'
 

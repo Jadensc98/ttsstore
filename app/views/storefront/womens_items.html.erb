@@ -1,3 +1,25 @@
-<h1>Storefront#womens_items</h1>
-<p>Find me in app/views/storefront/womens_items.html.erb</p>
-<%= render 'product_loop' %>
+<style>
+    body {
+        margin-top: 50px;
+    }
+
+</style>
+
+
+
+<h1>Women's</h1>
+
+<div class="row">
+	<% @womens.each do |product| %>
+		<div class="col-md-4">
+			<div class="well">
+				<% if product.image.blank? == false %>
+					<p><%= image_tag product.image.url, class: "img-responsive center-block list-image" %></p>
+				<% end %>
+				<h3><%= link_to product.name, product %></h3>
+				<p><%= number_to_currency product.price %></p>
+			</div>
+		</div>
+    <% end %>
+</div>
+

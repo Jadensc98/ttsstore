@@ -7,16 +7,26 @@ class StorefrontController < ApplicationController
       @products = Product.all
   end
   
-  def furniture_items
-      @furniture = Product.find(params[category_id: '5'])
+  def furniture
+      @furniture = Category.find_by(name: "Furniture").products
   end 
 
   def mens_items
-      @mens = Product.find(params[category_id: 1])
+      @mens = []
+      Product.all.each do |product|
+          if product.category.gender == "male"
+            @mens.push(product)
+          end 
+      end 
   end
 
   def womens_items
-      @womens = Product.find(params[category_id: '6,7,8,9'])
+          @womens = []
+      Product.all.each do |product|
+          if product.category.gender == "female"
+            @womens.push(product)
+          end 
+      end 
   end
 
   def items_by_brand
