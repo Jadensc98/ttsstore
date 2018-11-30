@@ -39,6 +39,7 @@
   <%= @product.category.name %>
 </p>
         <br/>
+        <% if @product.category.name != "Furniture" %>
         <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sizes
   <span class="caret"></span></button>
@@ -49,6 +50,7 @@
     <li><a href="#">XL</a></li>
   </ul>
 </div>
+        <% end %>
         <br/>
         		      	<%= form_tag add_to_cart_path do %>
                     <%= hidden_field_tag :product_id, @product.id %>
